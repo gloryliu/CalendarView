@@ -2,13 +2,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    namespace 'com.haibin.calendarviewproject'
+    compileSdk 35
     //noinspection GradleDependency
     defaultConfig {
         applicationId "com.haibin.calendarviewproject"
-        minSdkVersion 15
-        //noinspection OldTargetApi
-        targetSdkVersion 28
+        minSdk 24
+        targetSdk 35
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

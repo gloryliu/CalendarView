@@ -1,17 +1,19 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
 
+    namespace 'com.haibin.calendarview'
+    compileSdk 35
+    //noinspection GradleDependency
     defaultConfig {
-        minSdkVersion 14
-        //noinspection OldTargetApi
-        targetSdkVersion 28
-        versionCode 371
-        versionName "3.7.1"
+        minSdk 24
+        targetSdk 35
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -43,4 +45,3 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     testImplementation 'junit:junit:4.12'
 }
-apply from: '../script/gradle-jcenter-push.gradle'
